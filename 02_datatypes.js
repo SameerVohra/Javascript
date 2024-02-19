@@ -12,3 +12,7 @@ console.table([
   typeof phoneNum,
   typeof state,
 ]);
+
+age = "10399";
+
+console.log(age);
