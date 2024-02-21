@@ -60,3 +60,20 @@ console.log(Object.values(finalObj));
 console.log(Object.entries(finalObj));
 console.log(regularUser.hasOwnProperty("email"));
 console.log(regularUser.hasOwnProperty("id"));
+
+//Destructuring of Objects
+
+const course = {
+  courseName: "JS in hindi",
+  coursePrice: 999,
+  courseInstructor: "Hitesh",
+};
+
+console.log(course.courseInstructor); //Simple way
+
+// ---------------DESTRUCTURING----------------
+const { courseInstructor } = course;
+console.log(courseInstructor);
+
+const { courseInstructor: instructor } = course;
+console.log(instructor);
