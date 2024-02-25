@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CHAI AUR CODE | DOM</title>
+  </head>
+  <body style="background-color: black; color: white">
+    <ul class="language">
+      <li>JAVASCRIPT</li>
+    </ul>
+  </body>
+  <script>
+    //ADD VALUES IN THE LIST
+    function addLang(lang) {
+      const li = document.createElement("li");
+      li.innerHTML = `${lang}`;
+      document.querySelector(".language").appendChild(li);
+    }
+    addLang("PYTHON");
+
+    function addLangOpti(lang) {
+      const li = document.createElement("li");
+      li.appendChild(document.createTextNode(lang));
+      document.querySelector(".language").appendChild(li);
+    }
+    addLangOpti("CPP");
+    addLangOpti("RUBY");
+
+    //EDIT THE VALUES IN THE LIST
+    function editVal(val) {
+      const secondLang = document.querySelector("li:nth-child(2)");
+      secondLang.innerHTML = `${val}`;
+    }
+    editVal("golang");
+
+    function editValOpti(val) {
+      const secondLang = document.querySelector("li:nth-child(2)");
+      const newVal = document.createElement("li");
+      newVal.textContent = `${val}`;
+      secondLang.replaceWith(newVal);
+    }
+    editValOpti("TYPESCRIPT");
+
+    //REMOVE AN ELEMENT FROM THE LIST
+    //REMOVING THE LAST CHILD
+    const lastChild = document.querySelector("li:last-child");
+    lastChild.remove();
+    console.log(lastChild);
+  </script>
+</html>

@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Chai aur code</title>
+  </head>
+  <body style="background-color: black; color: white"></body>
+  <script>
+    const div = document.createElement("div");
+    //    console.log(div);
+    div.className = "myClass";
+    div.id = Math.random() * 10 + 1;
+    div.setAttribute("title", "Generated Title");
+    div.style.backgroundColor = "green";
+    div.style.padding = "20px";
+    div.innerHTML = "temporary text";
+    const textNode = document.createTextNode("Temporary text 2");
+    div.appendChild(textNode);
+    document.body.appendChild(div);
+    console.log(div);
+  </script>
+</html>
