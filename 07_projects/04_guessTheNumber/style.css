@@ -1,0 +1,41 @@
+#wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+form label {
+  margin-bottom: 20px;
+  font-size: 60px;
+}
+
+form input {
+  height: 50px;
+  width: 200px;
+  border-radius: 30px;
+  text-align: center;
+}
+
+form #subt {
+  margin-top: 40px;
+  padding: 20px;
+  height: 80px;
+  width: 200px;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  transition: 100ms ease-in-out;
+  cursor: pointer;
+}
+
+form #subt:hover {
+  box-shadow: 5px 10px 5px 0px white;
+}
