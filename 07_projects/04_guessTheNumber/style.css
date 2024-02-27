@@ -1,3 +1,7 @@
+body {
+  color: white;
+  background-color: black;
+}
 #wrapper {
   display: flex;
   justify-content: center;
@@ -29,7 +33,7 @@ form #subt {
   padding: 20px;
   height: 80px;
   width: 200px;
-  background-color: black;
+  background-color: orange;
   color: white;
   font-size: 20px;
   transition: 100ms ease-in-out;
@@ -37,5 +41,5 @@ form #subt {
 }
 
 form #subt:hover {
-  box-shadow: 5px 10px 5px 0px white;
+  box-shadow: 5px 10px 5px 0px yellow;
 }
