@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1>Chai aur Code</h1>
+    <button id="stop">STOP</button>
+  </body>
+  <script>
+    setTimeout(() => {
+      console.log("Sameer");
+    }, 3000);
+
+    const fullName = () => console.log("Sameer Vohra");
+    setTimeout(fullName, 2000);
+
+    const changeText = () => {
+      document.querySelector("h1").innerHTML = "Javascript";
+    };
+
+    const changeName = setTimeout(changeText, 5000);
+
+    document.querySelector("#stop").addEventListener("click", () => {
+      clearTimeout(changeName);
+      console.log("STOPPED");
+    });
+
+    setInterval(() => {
+      console.log("Hello");
+    }, 5000);
+  </script>
+</html>
