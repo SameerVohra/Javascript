@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <link href="./apireq.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="card">
+      <button id="show">SHOW DATA</button>
+    </div>
+  </body>
+  <script>
+    const apiData = "https://api.github.com/users/SameerVohra";
+    const xhr = new XMLHttpRequest();
+    const btn = document.querySelector("#show");
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      console.log(e);
+      xhr.open("GET", apiData);
+      xhr.onreadystatechange = function () {
+        console.log(xhr.readyState);
+        const data = JSON.parse(this.response);
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          const photo = data.avatar_url;
+          document.querySelector("#card").innerHTML = `<div class="data">
+            <img src="${data.avatar_url}" alt="">
+            <h1>USERNAME: ${data.login}</h1>
+            <h1>FOLLOWERS: ${data.followers}</h1>
+          </div>`;
+        }
+      };
+      xhr.send();
+    });
+  </script>
+</html>

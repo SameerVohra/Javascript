@@ -1,0 +1,43 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+}
+
+#card {
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  height: 500px;
+  width: 500px;
+}
+
+.data img {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+}
+
+.data h1 {
+  font-size: 30px;
+}
+
+#card button {
+  padding: 30px;
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  transition: 500ms ease-in;
+  cursor: pointer;
+}
+
+#card button:hover {
+  background-color: grey;
+  color: black;
+  box-shadow: 10px 10px 10px white;
+}
